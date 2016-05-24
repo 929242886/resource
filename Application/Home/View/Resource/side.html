@@ -1,0 +1,68 @@
+
+<div style="height:30px;line-height:30px;">
+
+<table  width="1035px;"    >
+<tr>
+<th ><input type="checkbox" ></th>
+
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>修改时间</th>
+<th>大小</th>
+
+</tr>
+ <foreach name = "wenjianjia" item = "vl">
+	<tr align="center" >
+		<td ><input type="checkbox" name='ids' ></td>		
+		<td align="left"><img src="__PUBLIC__/foreground/js/1.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:void(0);" onclick="level({$vl.t_id});" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.type}</font></a></td>
+        <td style="width:630px">{$vl.t_addtime}</td>
+        <td>---</td>
+	</tr>
+</foreach>
+<table  width="1000px;"  style="margin-right:20px;"   >
+<foreach name="resourcelist" item="vl">
+<?php if ($vl['vo']=="zip"): ?> 
+	<tr align="center" >
+		<td align="right"><input type="checkbox" name='ids' ></td>
+    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/foreground/js/zip.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a href="__CONTROLLER__/about/id/{$vl.re_id}" target="_black"></a><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+    	<td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" align="right">{$vl.size}</td>
+    </tr>
+<?php endif; ?>
+<?php if ($vl['vo']=="docx"): ?>
+    <tr align="center" >
+		<td align="right"><input type="checkbox" name='ids' ></td>
+    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/foreground/js/doc.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a href="__CONTROLLER__/about/id/{$vl.re_id}" target="_black"></a><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+    	<td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" align="right">{$vl.size}</td>
+    </tr>
+<?php endif; ?>
+<?php if ($vl['vo']=="exe"): ?>
+    <tr align="center" >
+		<td align="right"><input type="checkbox" name='ids' ></td>
+    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/foreground/js/exe.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a href="__CONTROLLER__/about/id/{$vl.re_id}" target="_black"></a><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+    	<td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" align="right">{$vl.size}</td>
+    </tr>
+<?php endif; ?>
+<?php if ($vl['vo']=="txt"): ?>
+    <tr align="center" >
+		<td align="right"><input type="checkbox" name='ids' ></td>
+    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/foreground/js/txt.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a href="__CONTROLLER__/about/id/{$vl.re_id}" target="_black"></a><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+    	<td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" align="right">{$vl.size}</td>
+    </tr>
+<?php endif; ?>
+<?php if ($vl['vo']=="mp4"): ?>
+    <tr align="center" >
+        <td align="right"><input type="checkbox" name='ids' ></td>
+        <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/foreground/js/flv.png" alt="" style="width:12px;height:12px;">&nbsp;&nbsp;&nbsp;<a href="__CONTROLLER__/about/id/{$vl.re_id}" target="_black"></a><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" align="right">{$vl.size}</td>
+    </tr>
+<?php endif; ?>
+</foreach>
+</table>
+</table>
+</foreach>
+</div>
+ 

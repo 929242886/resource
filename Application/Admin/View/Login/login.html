@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目后台管理系统</title>
+<link rel="stylesheet" href="__PUBLIC__/css/login.css" />
+
+</head>
+
+<body class="b">
+<div class="lg">
+<form action="__URL__/dologin" method="POST" onsubmit='return checkall();'>
+    <div class="lg_top"></div>
+    <div class="lg_main">
+        <div class="lg_m_1">
+        <input name="admin_name" value="" class="ur" id='admin_name' onblur='checkname();'/>
+        <input name="password" type="password" value="" class="pw" id='password' onblur='checkpwd();'/>
+		<p style='text-align:center; display:none;' id='p'></p>
+        </div>
+    </div>
+	
+    <div class="lg_foot">
+    <input type="submit" value="Login In" class="bn" />
+	</div>
+</form>
+</div>
+</body>
+</html>
+<script type="text/javascript" src='__PUBLIC__/js/jquery.min.js'></script>
+<script type="text/javascript">
+//js验证姓名
+function checkname()
+{
+	var admin_name=$("#admin_name").val();
+	if(admin_name=='')
+	{
+       $("#p").css({'display':'block','color':'red'});
+	   $("#p").html('请填写用户名');
+	   return false;
+	}
+	else
+	{
+       $("#p").css({'display':'block','color':'green'});
+	   return true;
+	}
+}
+//js验证密码
+function checkpwd()
+{
+	var pwd=$("#password").val();
+	if(pwd=='')
+	{
+       $("#p").css({'display':'block','color':'red'});
+	   $("#p").html('请填写密码');
+	   return false;
+	}
+	else
+	{
+       $("#p").css({'display':'block','color':'green'});
+	   return true;
+	}
+	
+}
+//验证提交
+var flage=false;
+function checkall()
+{
+	    /*if(!checkname()&& !checkpwd())
+		{
+			return false;		
+		}
+	   //验证密码,用户名是否正确
+		var admin_name=$("#admin_name").val();
+		var pwd=$("#password").val();
+        //姓名唯一性
+		var xhr= new XMLHttpRequest();
+		//alert(nm);
+		xhr.open('get','checkall1/name/'+admin_name+'/pwd/'+pwd);
+		//alert('checkall1?name='+admin_name+'&pwd='+pwd);
+		xhr.send(null);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+			      //alert(xhr.responseText);
+				  if()
+				  {
+					  flage=false;
+				  }
+				  else
+				  {
+					  flage=true;
+				  }
+				}
+			}	
+			return flage;*/
+			if(checkname()&&checkpwd())
+		    {
+			   return true;		
+		    }	
+			else
+			{
+				return false;
+			}
+
+}
+</script>

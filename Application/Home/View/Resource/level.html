@@ -1,0 +1,50 @@
+<div id='sp'>
+<div node-type="module-history-list" class="module-history-list">
+<div id="res-box">
+
+
+
+</div>
+</div><div style="display: block;" class="list-view-header"><div class="list-header">
+<ul style="display: none;" class="list-cols" node-type="cols">
+<li data-key="name" class="col first-col" style="width:60%;">
+<div node-type="check" class="col-item check">
+</li>
+<li data-key="size" class="col" style="width:16%;">
+<span class="order-icon"></span></li>
+</ul>
+<ul class="grid-cols" node-type="cols" style="">
+<li class="col first-col"><span class="history-list-dir">{$ming}{$url}</span>
+
+<div node-type="check" class="col-item check">
+
+</div></li></ul>
+<div class="list-header-operatearea global-clearfix">
+<div style="white-space: nowrap; position: relative;" class="list-header-operate">
+<div class="button-box-mark" style="display:inline-:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div><div class="opacity-button-box" style="position: absolute; top: 0px; padding-top: 7px; line-height: normal; display: block; visibility: hidden; padding-left: 130px; width: 1016px;">
+</div></div><div class="path-info" style="width:0%"><span class="search-feild" node-type="search-feild"></span></div></dd></div><div class="scrollbar" style="display: none;" unselectable="on"><div dir="up" id="scrollbarArrowUp" class="scrollbar-arrow scrollbar-arrow-up sprite" unselectable="on"></div><div style="height: 392px;" class="scrollbar-tracker" unselectable="on"><div style="height: 4219.54px; top: 0px;" class="scrollbar-thumb" unselectable="on"></div></div><div dir="down" id="scrollbarArrowDown" class="scrollbar-arrow scrollbar-arrow-down sprite" unselectable="on"></div></div></div></div><div style="display: block;" class="grid-view-container"><div style="height: 420px;" node-type="module-grid-view" class="module-grid-view"><div style="margin-top: 0px;" class="grid-view"><dd class="g-clearfix">
+<div id="list-heng">
+<foreach name='wenjianjia' item="folder">
+<div _installed="1" _position="0" style="display: block;" onclick="level({$folder.t_id});" class="grid-view-item open-enable"><div class="fileicon dir-large" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"><img style="visibility: hidden;" class="thumb"><span node-type="checkbox" class="checkbox"></span></div>
+<div class="file-name"><a node-type="name" class="filename" href="javascript:void(0);"  title="{$folder.type}">{$folder.type}</a>
+</div></div>
+</foreach>
+<foreach name="resourcelist" item="vl">
+    <?php if ($vl['vo']=="zip"): ?> 
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/zip.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?> 
+    <?php if ($vl['vo']=="docx"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon fileicon-large-doc" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/doc.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?>
+    <?php if ($vl['vo']=="exe"): ?>
+        <div _installed="1" _position="1" style="display: block;" class="grid-view-item"><div class="fileicon fileicon-sys-l-exe" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/exe.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?>
+    <?php if ($vl['vo']=="txt"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large"  title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/txt.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif;?>
+	<?php if ($vl['vo']=="mp4"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large"  title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/mp4.jpg" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif;?>
+</foreach>
+</div>
+</div>

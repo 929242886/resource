@@ -1,0 +1,31 @@
+
+</div><div style="display: block;" class="list-view-header"><div class="list-header">
+<ul style="display: none;" class="list-cols" node-type="cols">
+<li data-key="name" class="col first-col" style="width:60%;">
+<div node-type="check" class="col-item check">
+</li>
+<li data-key="size" class="col" style="width:16%;">
+<span class="order-icon"></span></li>
+</ul>
+<ul class="grid-cols" node-type="cols" style="">
+<li class="col first-col"><span class="history-list-dir">{$url}</span>
+<div node-type="check" class="col-item check">
+
+</div></li></ul>
+<div class="list-header-operatearea global-clearfix">
+<div style="white-space: nowrap; position: relative;" class="list-header-operate">
+<div class="button-box-mark" style="display:inline-:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div><div class="opacity-button-box" style="position: absolute; top: 0px; padding-top: 7px; line-height: normal; display: block; visibility: hidden; padding-left: 130px; width: 1016px;">
+</div></div><div class="path-info" style="width:0%"><span class="search-feild" node-type="search-feild"></span></div></dd></div><div class="scrollbar" style="display: none;" unselectable="on"><div dir="up" id="scrollbarArrowUp" class="scrollbar-arrow scrollbar-arrow-up sprite" unselectable="on"></div><div style="height: 392px;" class="scrollbar-tracker" unselectable="on"><div style="height: 4219.54px; top: 0px;" class="scrollbar-thumb" unselectable="on"></div></div><div dir="down" id="scrollbarArrowDown" class="scrollbar-arrow scrollbar-arrow-down sprite" unselectable="on"></div></div></div></div><div style="display: block;" class="grid-view-container"><div style="height: 420px;" node-type="module-grid-view" class="module-grid-view"><div style="margin-top: 0px;" class="grid-view"><dd class="g-clearfix">
+<center>
+<font size="5px">{$resource.resource}</font><br>
+
+<p>{$resource.jieshao} &nbsp;&nbsp;&nbsp;&nbsp;已下载：{$resource.load_num}次</p>
+
+
+</center>
+{$resource.content} <br>
+<if condition="$display eq 1">
+下载地址：<a href="{$resource.url}">{$resource.url}</a>
+<else/>
+下载地址：<a href="{$resource.bei_url}">{$resource.bei_url}</a>
+</if>

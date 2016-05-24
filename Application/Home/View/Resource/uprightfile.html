@@ -1,0 +1,107 @@
+
+<?php if ($format=="zip"): ?>   
+
+<table  width="1000px;"    >
+<tr>
+<th><input type="checkbox"></th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>添加时间</th>
+<th>大小</th>
+</tr>
+ <foreach name = "resourcelist" item = "vl" >
+	<tr align="center" >
+		<td align="center"><input type="checkbox" name='ids' ></td>
+		<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img style="padding-top:15px" src="__PUBLIC__/foreground/js/zip.png" alt="" height="12px" >&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:formatid(0);" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" >{$vl.size}</td>
+	</tr>
+</foreach>
+</table>
+
+<?php endif ?>
+
+<?php if ($format=="docx"): ?>
+    
+<table  width="1000px;"     >
+<tr>
+<th><input type="checkbox"></th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>添加时间</th>
+<th>大小</th>
+</tr>
+ <foreach name = "resourcelist" item = "vl" >
+	<tr align="center" >
+		<td align="center" ><input type="checkbox" name='ids' ></td>
+		<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img style="padding-top:15px" src="__PUBLIC__/foreground/js/doc.png" alt="" height="12px">&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:formatid(0);" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" >{$vl.size}</td>
+	</tr>
+</foreach>
+</table>
+
+
+<?php endif ?>
+
+<?php if ($format=="exe"): ?>
+<table  width="1000px;"     >
+<tr>
+<th><input type="checkbox"></th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>添加时间</th>
+<th>大小</th>
+</tr>
+ <foreach name = "resourcelist" item = "vl" >
+	<tr align="center" >
+		<td align="center" ><input type="checkbox" name='ids' ></td>
+		<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img style="padding-top:15px" src="__PUBLIC__/foreground/js/exe.png" alt="" height="12px">&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:formatid(0);" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" >{$vl.size}</td>
+	</tr>
+</foreach>
+</table>
+
+<?php endif ?>
+<?php if ($format=="mp4"): ?>
+<table  width="1000px;"     >
+<tr>
+<th><input type="checkbox"></th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>添加时间</th>
+<th>大小</th>
+</tr>
+ <foreach name = "resourcelist" item = "vl" >
+	<tr align="center" >
+		<td align="center" ><input type="checkbox" name='ids' ></td>
+		<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img style="padding-top:15px" src="__PUBLIC__/foreground/js/flv.png" alt="" height="12px">&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:formatid(0);" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;{$vl.add_time}</td>
+        <td style="width:200px;" >{$vl.size}</td>
+	</tr>
+</foreach>
+</table>
+
+<?php endif ?>
+
+
+<?php if ($format=="txt"): ?>
+    
+<table  width="1000px;"     >
+<tr>
+<th><input type="checkbox"></th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件名</th>
+<th>添加时间</th>
+<th>大小</th>
+</tr>
+ <foreach name = "resourcelist" item = "vl" >
+	<tr align="center"  >
+		<td align="center" ><input type="checkbox" name='ids' ></td>
+		<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;<img style="padding-top:15px" src="__PUBLIC__/foreground/js/txt.png" alt="" height="12px">&nbsp;&nbsp;&nbsp;<a node-type="name" class="filename" href="javascript:formatid(0);" title="{$vl.type}"><font color="black" style="margin-top:10px;">{$vl.resource}</font></a></td>
+        <td > {$vl.add_time}</td >
+        <td style="width:200px;" >{$vl.size}</td>
+
+	</tr>
+</foreach>
+</table>
+
+<?php endif ?>
+</table>
+

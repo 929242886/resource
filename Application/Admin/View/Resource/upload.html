@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>星空共享</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- basic styles -->
+<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="__PUBLIC__/css/font-awesome.min.css" />
+
+<!--[if IE 7]>
+  <link rel="stylesheet" href="__PUBLIC__/css/font-awesome-ie7.min.css" />
+<![endif]-->
+
+<!-- page specific plugin styles -->
+
+<!-- fonts -->
+
+<link rel="stylesheet" href="http://fonts.useso.com/css?family=Open+Sans:400,300" />
+
+<!-- ace styles -->
+
+<link rel="stylesheet" href="__PUBLIC__/css/ace.min.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/ace-rtl.min.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/ace-skins.min.css" />
+
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="__PUBLIC__/css/ace-ie.min.css" />
+<![endif]-->
+
+<!-- inline styles related to this page -->
+
+<!-- ace settings handler -->
+
+<script src="__PUBLIC__/js/ace-extra.min.js"></script>
+<script src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+<!--[if lt IE 9]>
+<script src="__PUBLIC__/js/html5shiv.js"></script>
+<script src="__PUBLIC__/js/respond.min.js"></script>
+<![endif]-->
+
+    
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.contextmenu.r2.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
+        /*body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}*/
+
+        .content{margin:0 auto;width:360px;}
+        .content p{margin:20px 0 0 0;border:solid 1px #C5D8FF;background:#EDF2FF;padding:10px;}
+        .mask {
+            position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;
+            z-index: 1002; left: 0px;
+            opacity:0.5; -moz-opacity:0.5;
+        }
+        #div2 {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding-top: 10%;
+            z-index: 1003;
+            left: 30%;
+            top: 0px;
+            opacity:1; -moz-opacity:1;
+        }
+    </style>
+    <script type="text/javascript"  charset="gbk">
+        $(document).ready(function() {
+            var del=encodeURI(encodeURI('删除'));
+            var rename=encodeURI(encodeURI('重命名'));
+            var upload=encodeURI(encodeURI('星空上传'));
+            $('.demo1').contextMenu('myMenu1',{
+                bindings:{
+                    del: function(t){
+                        if($(t).attr('types')=="link"){
+                            var action="__CONTROLLER__/del_resource";
+                        }else if($(t).attr('types')=="dir"){
+                            var action="__CONTROLLER__/del_dir";
+                        }
+                        $.get(action,{t_id: t.id},function(data){
+                            if(data==1){
+                                t.remove();
+                            }else{
+                                $("#message").html(data);
+                            }
+                        });
+                    },
+                    rename: function(t){
+                        //alert('aa');
+                        var linshi= $(t).html();
+                        linshi=linshi.replace(/\"/g,"\'");
+                        if($(t).attr('types')=="link"){
+                            var image="<img src=\'__PUBLIC__/images/wenjian.jpg\'>";
+                        }else if($(t).attr('types')=="dir"){
+                            var image="<img src=\'__PUBLIC__/images/wenjianjia.jpg\'>";
+                        }
+                       // alert(image);
+                        var id= t.id;
+                        var str='<span id="newly">'+image+'<a href="javascript:void(0)" ><font size="2"color="black" style="margin-left:6px"><input type="text" value="'+ t.title+'" id="text"><font></a><input type="button" value="√" style="height:20px;width:20px" id="u_yes"><input type="button" value="×" style="height:20px;width:20px" id="u_error"> <script>$("#u_error").click(function(){$(this).parent().parent().parent().html("'+linshi+'");});$("#u_yes").click(function(){var text=$("#text").val();$.get("__CONTROLLER__/updatedir",{fid:'+ t.id+',text:text,type:"'+$(t).attr('types')+'"},function(data){if(data==1){var file="<span>'+image+'&nbsp;&nbsp;&nbsp;<a href=\'javascript:void(0)\' ><font size=\'2\' color=\'black\'>"+text+"</font></a><br></span>";$("#newly").html(file);}else{$("#message").html(data);}});})<\/script><br></span>';
+
+                        $(t).html(str);
+                    }
+                }
+            });
+            //页面
+            $('body').contextMenu('myMenu2',{
+                bindings:{
+                    upload: function(t){
+                        showMask();
+                    },
+                    'delete': function(t){
+                        alert('Trigger was '+t.id+'\nAction was Delete');
+                    }
+                }
+            });
+
+        });
+        function showMask(){
+            $("#mask").css("height",$(document).height());
+            $("#mask").css("width",$(document).width());
+            $("#mask").show();
+            openme();
+        }
+        //隐藏遮罩层
+        function hideMask(){
+            $("#mask").hide();
+        }
+
+        function openme(){
+            document.getElementById('div2').style.display='block';
+        }
+        function closeme(){
+            document.getElementById('div2').style.display='none';
+            hideMask();
+        }
+        function logo_in(){alert()
+//验证
+//转向...
+//myform.action=""
+//myform.submit()
+            closeme();
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="contextMenu" id="myMenu1">
+    <ul>
+        <li id="del">删除</li>
+        <li id="rename">重命名</li>
+    </ul>
+</div>
+<div class="contextMenu" id="myMenu2">
+    <ul>
+        <li id="upload">星空上传</li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="mask" class="mask">
+    <div id="div2">
+        <table width="30%" border="0" cellpadding="3" cellspacing="1" style="background: #ff7300; position:static;filter:progid:DXImageTransform.Microsoft.DropShadow(color=#666666,offX=4,offY=4,positives=true)" align="center">
+            <tr id="m_tr">
+                <td><font color="#FFFFFF">欢迎登陆：</font></td>
+                <td align="right">
+                    <input type="button" value="ｘ" onClick="closeme()" style="cursor: hand;">
+                </td>
+            </tr>
+            <tr>
+                    <td colspan="2" width="100%" bgcolor="#FFFFFF" height="150">
+                        <form action="__MODULE__/Resource/add" method="post" enctype='multipart/form-data'>
+                            <div id="wai" width="100%" bgcolor="#FFFFFF" height="150">
+                                <table>
+                                    <input type="file" name="url" required>
+                                    <input type="hidden" name="t_id" value="{$fid}">
+                                    <tr>
+                                        <td>外网URL :</td>
+                                        <td><input type="text" name="bei_url" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align="right"><input type="submit" value="确定"><input type="button" name="exit" value="取消" onClick="closeme()"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </form>
+                    </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>
+<!--右键-->
+<div class="navbar navbar-default" id="navbar">
+    <script type="text/javascript">
+        try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="icon-leaf"></i>
+                    星空共享后台系统
+                </small>
+            </a><!-- /.brand -->
+        </div><!-- /.navbar-header -->
+
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+
+
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="__PUBLIC__/avatars/user.jpg" alt="Jason's Photo" />
+                        <span class="user-info">
+                            <small>欢迎光临,</small>
+                            {$Think.session.admin_name}
+                        </span>
+                        <i class="icon-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="__MODULE__/Login/logout">
+                                <i class="icon-off"></i>
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul><!-- /.ace-nav -->
+        </div><!-- /.navbar-header -->
+    </div><!-- /.container -->
+</div>
+
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <div class="sidebar" id="sidebar">
+            <script type="text/javascript">
+                try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+            </script>
+
+            <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+
+                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                    <span class="btn btn-success"></span>
+
+                    <span class="btn btn-info"></span>
+
+                    <span class="btn btn-warning"></span>
+
+                    <span class="btn btn-danger"></span>
+                </div>
+            </div><!-- #sidebar-shortcuts -->
+
+            <ul class="nav nav-list">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="icon-dashboard"></i>
+                        <span class="menu-text">共享控制台</span>
+                    </a>
+                </li>
+<!--   左侧列表    START-->
+            <volist name="data" id='v'>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <i class="icon-desktop"></i>
+                        <span class="menu-text"> {$v.privilege} </span>
+
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+                
+                    <ul class="submenu">
+                    <!--   左侧二级列表    START-->
+                        <volist name="v['son']" id='v1'>
+                        
+                        <li>
+                            <a href="__MODULE__/{$v1.controller}/{$v1.action}">
+                                <i class="icon-double-angle-right"></i>
+                                {$v1.privilege}
+                            </a>
+                        </li>
+                        </volist>
+                    <!--   左侧二级列表    END--> 
+                    </ul>
+                </li>
+            </volist>
+<!--   左侧列表    END-->
+
+            </ul><!-- /.nav-list -->
+<!--主体-->
+<div class="sidebar-collapse" id="sidebar-collapse">
+    <i class="icon-double-angle-left" data-icon1="icon-double-angle-left"
+       data-icon2="icon-double-angle-right"></i>
+</div>
+
+<script type="text/javascript">
+    try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+</script>
+</div>
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
+        <div id="message"></div>
+        <div>
+            <input type="button"style="height:30px;width:150px;margin-
+top:10px;line-height:30px" value="新建文件夹" id="new_dir">
+            <script>
+                $(function(){
+                    $("#new_dir").click(function(){
+                        var arr="{$arr}";
+                        if(arr.indexOf("新建文件夹") != '-1'){
+                            for(i=1;i<=100;i++){
+                                if(arr.indexOf("新建文件夹("+i+")") == '-1'){
+                                    var name="新建文件夹("+i+")";
+                                    i=101;
+                                }
+                            }
+                        }else{
+                            var name="新建文件夹";
+                        }
+                        //alert(name);
+                        //return false;
+                        var str='<span id="newly"><img src="__PUBLIC__/images/wenjianjia.jpg"><a href="javascript:void(0)" ><font size="2"color="black" style="margin-left:6px"><input type="text" value="'+name+'" id="text"><font></a><input type="button" value="√" style="height:20px;width:20px" id="yes"><input type="button" value="×" style="height:20px;width:20px" id="error"> <script>$("#error").click(function(){$(this).parent().parent().parent().remove();});$("#yes").click(function(){ var fid={$fid};var text=$("#text").val();$.get("__CONTROLLER__/adddir",{fid:fid,text:text},function(data){if(data==1){var file="<span><img src=\'__PUBLIC__/images/wenjianjia.jpg\'>&nbsp;&nbsp;&nbsp;<a href=\'javascript:void(0)\' ><font size=\'2\' color=\'black\'>"+text+"<font></a><br></span>";$("#newly").html(file);history.go(0);}else{$("#message").html(data);}});})<\/script><br></span>';
+                        $("#table").prepend(str);
+                    });
+                });
+            </script>
+        </div>
+       
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon"></i>
+                <a href="__MODULE__/index/index">首页</a>
+            </li>
+        
+        </ul><!-- .breadcrumb -->
+    </div>
+    <if condition="empty($type) && empty($dir)">
+        <font size="5" style="padding-top:20px;padding-left:30px;">暂时还未上传任何文件</font>
+    <else />
+        <div style="padding-left:20px">
+            <!-- <div>文件名</div>
+            <div id="table">
+                <foreach name="type" item="type_v" >
+                    <div class="rightclickarea">
+                        <span class="demo1" id="{$type_v.t_id}"title="{$type_v.type}"><img src="__PUBLIC__/images/wenjianjia.jpg">&nbsp;&nbsp;&nbsp;<a href="__MODULE__/Resource/upload?id={$type_v.t_id}"><font size="2"color="black">{$type_v.type}<font></a></span>
+                    </div>
+                </foreach>
+                <foreach name="dir" item="dir_v" key="k">
+                    <div>
+                        <span><img src="__PUBLIC__/images/wenjian.jpg">&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" id="{$k}"><font size="2"color="black">{$dir_v.resource}<font></a></span>
+                    </div>
+                </foreach>
+            </div> -->
+            <div>文件名</div>
+                    <div id="table">
+                        <foreach name="type" item="type_v" >
+                            <div class="rightclickarea">
+                                <span class="demo1" id="{$type_v.t_id}" title="{$type_v.type}" types="dir"><img src="__PUBLIC__/images/wenjianjia.jpg">&nbsp;&nbsp;&nbsp;<a href="__MODULE__/Resource/upload?id={$type_v.t_id}"><font size="2"color="black">{$type_v.type}<font></a></span>
+                            </div>
+                        </foreach>
+                        <foreach name="dir" item="dir_v" key="k">
+                            <div>
+                                <span class="demo1" id="{$dir_v.re_id}" title="{$dir_v.resource}" types="link"><img src="__PUBLIC__/images/wenjian.jpg">&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)"><font size="2"color="black">{$dir_v.resource}<font></a></span>
+                            </div>
+                        </foreach>
+                    </div>
+    </if>
+</div>
+<script src="__PUBLIC__/js/ace.min.js"></script>
+</body>
+</html>
+                       
+

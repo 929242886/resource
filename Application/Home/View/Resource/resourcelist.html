@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>星空共享</title>
+<script>
+    var custom_metrics = 'c_pd'.split(',');
+        window.alogObjectConfig = {
+        sample: '0.05', 
+        product: '221',
+        page: '221_107',
+        monkey_page: '',  
+        speed_page: '',  
+ 
+        speed: {
+                            custom_metrics: custom_metrics,
+                        sample: '1'
+        },
+ 
+        monkey: {
+            sample: ''   
+        },
+ 
+        exception: { 
+            sample: '1'   
+        },
+ 
+        feature: {
+            sample: ''   
+        },
+ 
+        cus: {
+            sample: '1'
+        },
+ 
+        csp: {
+            sample: '',  
+            'default-src': [
+                {match: '*bae.baidu.com', target: 'Accept,Warn'},
+                {match: '*.baidu.com,*.bdstatic.com,*.bdimg.com,localhost', target: 'Accept'},
+                {match: /^(127|172|192|10)(\.\d+){3}$/, target: 'Accept'},
+                {match: '*', target: 'Accept,Warn'}
+            ]
+        }
+    };
+ 
+    void function(a,b,c,d,e,f,g){if(a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||+new Date,"https:"===a.location.protocol){if(d="https://gss2.bdstatic.com/70cFsjip0QIZ8tyhnq"+d,!a.alogObjectConfig||!a.alogObjectConfig.sample)return}else d="http://img.baidu.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d,g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||+new Date),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);
+</script><link rel="shortcut icon" href="">
+<script type="text/javascript">
+        var testServerTimestamp = Number('1463741502729') - (new Date().getTime());
+    </script>
+<script type="text/javascript" src="__PUBLIC__/foreground/js/mod.js"></script>
+<script type="text/javascript" src="__PUBLIC__/foreground/js/environment_509b798.js"></script>
+
+
+<script type="text/javascript">
+    (function(){
+        var context={"loginstate":1,"username":"\u51cc\u6167\u798f","third":0,"flag":1,"file_list":null,"uk":88414806,"task_key":"cb3ec71dadd0cccad328887177655042af9a2baf","task_time":1463741502,"sampling":false,"bdstoken":"0b3b032470afeeaa245b4411a6335e52","is_vip":0,"bt_paths":null,"applystatus":1,"sign1":"9956f240691df33e10d858950645eab64334ed16","sign2":"function s(j,r){var a=[];var p=[];var o=\"\";var v=j.length;for(var q=0;q<256;q++){a[q]=j.substr((q%v),1).charCodeAt(0);p[q]=q}for(var u=q=0;q<256;q++){u=(u+p[q]+a[q])%256;var t=p[q];p[q]=p[u];p[u]=t}for(var i=u=q=0;q<r.length;q++){i=(i+1)%256;u=(u+p[i])%256;var t=p[i];p[i]=p[u];p[u]=t;k=p[((p[i]+p[u])%256)];o+=String.fromCharCode(r.charCodeAt(q)^k)}return o};","sign3":"d76e889b6aafd3087ac3bd56f4d4053a","timestamp":1463741502,"timeline_status":1,"face_status":0,"srv_ts":1463741502,"need_tips":0,"is_year_vip":0,"show_vip_ad":0,"vip_end_time":null,"is_evip":0,"is_svip":0,"is_auto_svip":0,"urlparam":[],"XDUSS":"pansec_DCb740ccc5511e5e8fedcff06b081203-ATA8GfnFUUyuKmh84wJrv3a5PunjkW1v7Cls%2FY3jAbVZzsxPd%2Fva9u0s1B7vAJp%2F8lqI5I11Xipld1TmVaSMfrKuWjI0cdQPu22zRtEpnI8bmC45kzRvUilKM5tHOtmkwhoxAVdI4QFp95iShxXh6bFkPtTHHGtQClgj2oEXCaCJIX41Ac1ISPYATIXc%2FeCwzHaamVe9iKuhT5eDJR9h4H7GMlYORs61FcwduPBYVDvP5kRcqgRfIt3aXCTtyjJIw3RR2Rizk%2BqmAUOqSmqnSA%3D%3D"};
+        var yunData = require('disk-system:widget/data/yunData.js');
+        yunData.setData(context);
+        yunData.setData('SERVERTIME', 1463741502729);
+        })();
+            </script>
+
+<meta content="b31ebb7c3759312418b3645de4991aef" name="baidu-tc-verification">
+<meta content="max-age=30" http-equiv="Cache-Control">
+<style type="text/css">
+
+        html {
+            *overflow-y: hidden!important;
+        }
+        body {
+            overflow: hidden;
+        }
+        body, button, input, select, textarea {
+            font: 12px/1.5 tahoma, arial, "宋体"!important;
+            color: #666;
+        }
+        /* layout begin */
+        #layoutApp {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+			min-width: 1103px;
+			_width: 100%;
+			_height: 630px;
+        }
+        #layoutAside {
+            width: 210px;
+            height: 100%;
+        }
+		/* layout end */
+        /* icon begin */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("/box-static/disk-system/images/icon_743d29d.png") no-repeat 0 0;
+        }
+        .icon-aside {
+            width: 23px;
+            height: 22px;
+            margin: 6px 10px 0 2px;
+        }
+        /* icon end */
+    </style>
+    <style type="text/css">#layoutAside{top:49px;left:0px;bottom:0px;z-index:9;position:absolute;}#layoutMain{top:49px;left:210px;bottom:0px;right:0px;z-index:1;position:absolute;}#dynamicLayout_0{background:#000;top:0px;right:0px;left:0px;width:100%;height:49px;z-index:41;position:absolute;}</style>
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/foreground/js/a_002.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/foreground/js/a_003.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/foreground/js/a.css">
+<script> alog('speed.set', 'ht', +new Date); </script><link href="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/widget-sync_606e84d.css" type="text/css" rel="stylesheet"><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/timeline-all_59b6fd2.js" type="text/javascript"></script><link href="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/widget-sync_41b9216.css" type="text/css" rel="stylesheet"><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/mainSmallBanner-all_41bdf89.js" type="text/javascript"></script><link href="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/plugin_fc3415e.css" type="text/css" rel="stylesheet"><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/asideAppDownloads-all_8da6e22.js" type="text/javascript"></script><link href="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/widget-async_c664c9d.css" type="text/css" rel="stylesheet"><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/quota-all_f6d7d6e.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/vipWarn-all_a1e7193.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/plugin-upload_375b4a1.js" type="text/javascript"></script><style type="text/css">.context-menu{position:absolute;font-size:13px!important;color:#000!important;top:0;left:0;-moz-user-select:none;-o-user-select:none;-webkit-user-select:none;user-select:none;font-family:"宋体";}.context-menu .arrowicon{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAyCAMAAACwGaE2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzhGQzA4MUIzRkNFMTFFNEFFNkRGOTBCODU5NjkyMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzhGQzA4MUMzRkNFMTFFNEFFNkRGOTBCODU5NjkyMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3OEZDMDgxOTNGQ0UxMUU0QUU2REY5MEI4NTk2OTIxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3OEZDMDgxQTNGQ0UxMUU0QUU2REY5MEI4NTk2OTIxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpbvuBQAAAAGUExURXp6ev///7iACewAAAACdFJOU/8A5bcwSgAAAElJREFUeNrc0kEKACAIRNHf/S8dSWoz4AVyo4/QRQwrircBLbgkEaRwSAOZc7nqC6FChYr5bb75xS9pCmS29FiyLHWWyGpbgAEA38gCGb87IAIAAAAASUVORK5CYII=) right center no-repeat}.context-menu .arrowicon:hover,.context-menu .arrowicon.open{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAyCAMAAACwGaE2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODAxQTFDRkYzRkNFMTFFNDhCREVDNDI5RDEyNTM1NTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODAxQTFEMDAzRkNFMTFFNDhCREVDNDI5RDEyNTM1NTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MDFBMUNGRDNGQ0UxMUU0OEJERUM0MjlEMTI1MzU1NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MDFBMUNGRTNGQ0UxMUU0OEJERUM0MjlEMTI1MzU1NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlWhQhkAAAAGUExURf///////1V89WwAAAACdFJOU/8A5bcwSgAAAElJREFUeNrc0kEKACAIRNHf/S8dSWoz4AVyo4/QRQwrircBLbgkEaRwSAOZc7nqC6FChYr5bb75xS9pCmS29FiyLHWWyGpbgAEA38gCGb87IAIAAAAASUVORK5CYII=)}.context-menu ul,.context-menu li{list-style:none;padding:0;margin:0;font-size:13px!important;color:#000!important}.context-menu .list{min-height:23px;padding:2px 0;position:absolute;background-color:#FFF;color:#000}.context-menu .list{border:1px solid #BABABA}.context-menu .list li{display:list-item;cursor:default;height:23px;line-height:23px;padding:0 30px 0 34px;white-space:nowrap;position:relative;z-index:1}.context-menu .list .disable,.context-menu .list .disable:hover{color:#A1A192!important;background-color:#FFF;background:none}.context-menu .list li .icon,.context-menu .list li .icon-hover{position:absolute;display:block;width:16px;height:16px;top:3px;left:9px}.context-menu .list li .icon-hover{display:none}.context-menu .list li:hover{background-color:#4281F4;color:#FFF!important}.context-menu .list li:hover>.icon{display:none}.context-menu .list li:hover>.icon-hover{display:block}.context-menu .list .has-more{z-index:2}.context-menu .list .has-more.open{background-color:#4281F4;color:#FFF!important}.context-menu .list .has-more .list{display:none;top:-3px;left:98%;z-index:2}.context-menu .list .separate{padding:0;margin:5px 0;height:1px;line-height:0;font-size:0!important;background-color:#e9e9e9;cursor:default}.context-menu .list .separate:hover{background-color:#e9e9e9}.context-menu .list .arrow-down{height:16px;background-position:center -38px}.context-menu .list .arrow-up{height:16px;background-position:center 4px}</style><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/baidu-tongji_f417109.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/plugin-download_738fe93.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/officeEdit-all_0cff955.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/video-all_ea25369.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/faceSearch-all_1a152fe.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/puzzle-all_3200453.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/guide-all_5ddaacb.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/decrease-all_16c1b22.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/plugin-header_e618e33.js" type="text/javascript"></script><script src="%E7%99%BE%E5%BA%A6%E4%BA%91%20%E7%BD%91%E7%9B%98-%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6_files/module_header.js" type="text/javascript"></script><style media="screen" type="text/css">#httpProxy {visibility:hidden}</style><style type="text/css">.cssTextModulestart{}.center{text-align: center;}.module-header{height:49px;background:#252525;border-bottom:0;position:relative;padding:0;box-shadow:0 0 5px #333}.module-header .clearfix:after{content:".";display:block;clear:both;visibility:hidden;font-size:0;height:0;line-height:0}.module-header .clearfix{zoom:1}.module-header a{color:#06c;text-decoration:none}.module-header a:hover,.module-header a:active,.module-header a:focus{color:#06c;text-decoration:underline}.module-header .f-icon{background-image:url("http://yun.baidu.com/ppres/static/thirdparty/header/images/frame-icon.png?t=201605121041");background-repeat:no-repeat}.module-header .no-height{height:0;line-height:0;font-size:0}.module-header .has-pulldown{cursor:pointer;position:relative;*z-index:10000}.module-header .pulldown{position:absolute;z-index:1000;cursor:default;display:none;top:30px;left:0}.module-header .pulldown .arrow{*margin-bottom:-1px;_margin-bottom:0;height:0;width:0;font-size:0;line-height:0;border-width:7px;border-style:solid;border-color:transparent transparent #f6f6f9 transparent;_filter:chroma(color=tomato);_border-color:tomato tomato #f6f6f9 tomato;position:relative;display:block;left:20px;z-index:2}.module-header .pulldown .content{background:#f6f6f9;color:#333;text-align:left;border-radius:3px;border:#afafaf 1px solid;border-width:0 1px 1px 1px;box-shadow:0 2px 4px rgba(0,0,0,.2);position:relative;z-index:1;*top:-2px}.module-header .pulldown-canvas{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;filter:alpha(opacity=0)}.module-header .logo{display:block;height:36px;width:113px;float:left;margin-left:10px;background-position:0 0;margin-top:5px;display:inline;outline:0}.module-header .logo-hao123{height:36px;width:100px;float:left;margin-left:10px;background-position:0 -162px;display:none;margin-right:-10px}.module-header .logo-unicom{height:36px;width:145px;float:left;margin-left:10px;background-position:0 -202px;margin-top:5px;display:none;margin-right:-10px}.module-header .navs-title{font:18px "Microsoft YaHei","Microsoft JhengHei","黑体";color:#d8d8d8;float:left;padding:10px 0 0 17px}.module-header .navs{padding:0 0 3px 25px;height:45px;float:left;width:400px;padding-bottom:0!important}.module-header .info{position:absolute;top:3px;right:0}.capacity-tips{display: none;background: url("http://yun.baidu.com/ppres/static/thirdparty/header/images/icon-capa-tips.png") no-repeat;position:relative;top:15px;*top:17px;right:17px;width:200px;height: 31px;overflow:hidden;zoom:1;}.capa-tips{float: left;margin-left: 17px;margin-top: 5px;height: 24px;line-height: 24px;color:#666666;}.icon-tips{cursor:pointer;float: left;width:15px;height: 10px;margin-left: 28px; margin-top: 13px;background: url("http://yun.baidu.com/ppres/static/thirdparty/header/images/icon-tips-wrong.png") no-repeat;background-position: -6px 0px;}.module-header .info a,.module-header .info a:visited,.module-header .info a:active{color:#d8d8d8}.module-header .navs a:hover,.module-header .navs a:active{text-decoration:none;background-color:#0f0f0f;color:#d8d8d8}.module-header .navs .def-nav,.module-header .navs .pulldown-nav,.module-header .navs .separate{display:block;float:left;height:48px;font:18px "Microsoft YaHei","Microsoft JhengHei","黑体";color:#d8d8d8;text-align:center;width:90px;line-height:48px}.module-header .navs .def-nav-share{position:relative}.module-header .navs .def-nav em.share-icon{position:absolute;height:12px;width:12px;display:block;top:9px;right:15px;background:url("http://yun.baidu.com/ppres/static/thirdparty/header/images/notice.png?t=201605121041") no-repeat}.module-header .navs .def-nav.current em.share-icon{display:none}.module-header .navs .nav-main{width:auto}.module-header .navs .nav-main .pulldown-nav{width:auto;padding:0 27px}.module-header .nav-hover .pulldown-nav{background-color:#f6f6f9!important;color:#333!important}.module-header .nav-hover .pulldown-nav em{background-position:-89px -55px!important}.module-header .nav-hover .pulldown{display:block}.module-header .navs .def-nav .app-url{left:150px;top:48px;width:578px}.module-header .navs .def-nav .pulldown-canvas-url{width:575px;height:109px}.module-header .navs .def-nav .app-url .arrow{left:140px}.module-header .navs .app-url .content{padding:17px 0 0 22px;height:91px}.module-header .navs .app-url .content a,.module-header .navs .app-url .content a:hover{color:#333}.module-header .navs .app-url .li{cursor:pointer;padding-top:8px;width:66px;height:66px;border-radius:3px;display:block;float:left;text-align:center}.module-header .navs .app-url .li:hover{background-color:#e0e1e5}.module-header .navs .app-url .li .icon{margin:0 auto;width:35px;height:38px;display:block;background:url("http://yun.baidu.com/ppres/static/thirdparty/header/images/dropdown_menu.png?t=201605121041") no-repeat}.module-header .navs .app-url .li:hover .icon{background-image:url("http://yun.baidu.com/ppres/static/thirdparty/header/images/dropdown_menu_hover.png?t=201605121041")}.module-header .navs .app-url .tongxunlu .icon{background-position:-35px 0}.module-header .navs .app-url .xiangce .icon{background-position:-70px 0}.module-header .navs .app-url .shoucang .icon{background-position:-105px 0}.module-header .navs .app-url .note .icon{background-position:-140px 0}.module-header .navs .app-url .duanxin .icon{background-position:-175px 0}.module-header .navs .app-url .zhaohui .icon{background-position:-210px 0}.module-header .navs .app-url .xiaodu .icon{background-position:-245px 0}.module-header .navs .app-url .jiankang .icon{background-position:-280px 0}.module-header .navs .app-url .wenzhang .icon{background-position:-315px 0}.module-header .navs .app-url .tonghuajilu .icon{background-position:-350px 0}.module-header .navs .app-url .li .text{height:30px;display:block;font:14px "Microsoft YaHei","Microsoft JhengHei","黑体"}.module-header .navs .separate{margin:0;height:48px;width:2px;background:#2a2b2d}.module-header .navs .pulldown-nav{position:relative}.module-header .navs .pulldown-nav em{position:absolute;display:block;right:9px;top:18px;height:12px;width:12px;font-size:0;background-position:-89px -45px}.module-header .navs .pulldown-nav:hover .f-icon,.module-header .navs .pulldown-nav:active .f-icon{position:absolute;display:block;right:9px;top:18px;height:12px;width:12px;font-size:0;background-position:-89px -55px}.module-header .navs .current,.module-header .navs .current .pulldown-nav{font-weight:bold;color:#FFF;display:inline-block;height:49px;background-color:#0f0f0f;text-align:center;line-height:48px}.module-header .navs .current:hover{color:#ececec}.module-header .info{margin-top:3px;float:right}.module-header .info ul{text-align:right;float:left;height:36px;margin:0;padding:0}.module-header .info a{position:relative}.module-header .info a:hover{color:#d8d8d8;text-decoration:underline}.module-header .info a:hover{color:#FFF}.module-header .info .info-i{padding:0 8px;margin:10px 0;display:inline-block;*display:inline;*zoom:1;height:16px;border-right:#393939 1px solid;color:#d8d8d8;font: 12px/1.5 "SimSun";vertical-align:middle}.module-header .info .has-pulldown{padding-right:28px}.module-header .info .has-pulldown .pull-arrow{position:absolute;display:block;right:10px;top:1px;height:12px;width:12px;font-size:0;background-position:-89px -45px}.module-header .info .no-separate{border:0}.module-header .info .gg-content{display:none}.module-header .gg-content,.module-header .gg-content a,.module-header .gg-content a:hover{color:#e15f00!important}.module-header .info .gg-content a{display:inline-block;height:16px;line-height:16px;background:0 -6px no-repeat;_margin-top:0;background-image:none!important}.module-header .info .search-box{display:none}.module-header .search-form{float:left;height:22px;border:#1a1a1a 1px solid;overflow:hidden;background-color:#FFF;margin-top:-4px;_margin-top:-2px;position:relative}.module-header .search-form .search-query{width:100px;height:20px;line-height:20px;float:left;padding-left:4px;border:0;background:0;background:transparent;color:#666;position:relative;z-index:2;outline:0;background-image:url("http://yun.baidu.com/ppres/static/thirdparty/header/images/robin-search-btn.png?t=201605121041");background-position:1000px 1000px;background-repeat:no-repeat}.module-header .search-form input.search-query::-ms-clear,.module-header .search-form input.search-query::-ms-reveal{display:none}.module-header .search-form .search-button{width:38px;height:22px;border:0;cursor:pointer;float:left;background:#ccc url("http://yun.baidu.com/ppres/static/thirdparty/header/images/sousuo.jpg?t=201605121041")}.module-header .search-form .input-placeholder{position:absolute;top:3px;_top:5px;left:4px;color:#999;text-align:left;cursor:text}.module-header .search-form .input-clear{display:none;z-index:3;position:absolute;height:22px;width:22px;line-height:22px;top:0;right:38px;cursor:pointer;background:#fff url("http://yun.baidu.com/ppres/static/thirdparty/header/images/robin-search-clear.png?t=201605121041") no-repeat 0 0}.module-header .search-form .input-clear:hover{background-position:0 -22px}.module-header .info .disk-capacity{width:170px;position:relative;text-align:left}.module-header .info .progress{position:absolute;top:0;right:10px;width:138px;height:16px;border-bottom:#2f2f2f 1px solid}.module-header .info .pro-con{position:relative;width:136px;height:14px;border:#1b1b1b 1px solid;background:#323232}.module-header .info .progress .bar{position:absolute;display:block;top:0;left:0;width:20%;height:14px;background-color:#d4d5d7}.module-header .info .progress .text{position:absolute;top:0;left:0;text-align:right;display:block;width:130px;height:14px;line-height:14px;color:#646464}.module-header .info .user-name{position:relative;padding-left:24px}.module-header .info .user-name .name{display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:bottom}.module-header .info .user-name .identity{position:absolute;top:1px;left:3px;height:16px;width:16px;background-image: url("http://yun.baidu.com/ppres/static/thirdparty/header/images/h-vip-icon-all.png?t=201605121041");background-position:-1px 0;}.module-header .info .no-vip{padding-left: 22px;}.module-header .info .no-vip .identity{}.module-header .info .user-name .is-vip{background-position: 0 -19px;}.module-header .info .user-name .is-svip{background-position:0 -37px;}.module-header .info .user-info,.module-header .info .more-info{top:9px;left:auto;right:-24px;width:116px}.module-header .info .notice-nu{display:inline-block;padding-left:4px;background-position:-86px -109px;background-position:-86px -112px\0;height:14px;height:16px\0;-webkit-text-size-adjust:none;font-size:10px;font-style:normal}@-moz-document url-prefix(){.module-header .info .notice-nu{background-position:-86px -111px}}.module-header .info .notice-nu .f-icon{display:inline-block;padding-right:4px;background-position:right -109px;background-position:right -112px\0;color:#FFF}@-moz-document url-prefix(){.module-header .info .notice-nu .f-icon{background-position:-104px -111px}}.module-header .info .pulldown-canvas-user{width:116px;height:243px}.module-header .info .user-info .arrow{left:70px;*left:-32px}.module-header .info .user-info .content,.module-header .info .more-info .content{padding:10px 0;height:139px}.module-header .info .more{padding:0;display:inline;line-height:inherit;background:0}.module-header .info .more-info .content{height:245px}.module-header .info .pulldown-canvas-more{width:116px;height:285px}.module-header .info .user-info .content a,.module-header .info .more-info .content a{display:block;padding-left:20px;height:30px;line-height:30px;color:#888}.module-header .info .user-info .content a:hover,.module-header .info .more-info .content a:hover{color:#333;text-decoration:none;background:#e0e1e5}.module-header .info .user-info .li,.module-header .info .more-info .li{display:block;padding:2px 0;height:30px}.module-header .info .user-info .separate-li,.module-header .info .more-info .separate-li{display:block;margin:3px 11px;border-top:#ebebec 1px solid;border-bottom:#FFF 1px solid}.module-header .info .more-info{right:0}.module-header .info .more-info .arrow{left:94px;*left:-8px}.module-header .noticelist{background:#fff1c3;color:#000;text-align:left;border-radius:3px;border:#dbaf3e 1px solid;border-width:0 1px 1px 1px;box-shadow:0 2px 4px rgba(0,0,0,.2);position:relative;z-index:1;top:34px;right:132px;width:170px;padding-top:12px;padding-bottom:10px}.module-header .noticelist a{display:block;height:26px;font-size:13px;line-height:26px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-top:1px dashed #eadba9;margin-left:15px;margin-right:15px}.module-header .noticelist a:first-child{border-top:0}.module-header .noticelist .firstchildclass{border-top:0}.module-header .noticelist .close{margin-left:148px;*margin-left:140px;font-weight:bold;color:#ab831b;font-style:normal;font-size:15px;position:absolute;top:5px}.module-header .noticelist .close:hover{color:#dbaf3e;cursor:pointer}.module-header .noticelist span{color:#0063cf;font-weight:bold}.module-header .info .noticelist a,.module-header .info .noticelist a:hover,.module-header .info .noticelist a:active{color:#000;text-decoration:none;cursor:pointer}.module-header .info .more-info .noticeinfo{right:77px}.module-header .info .show-item{display:inline-block;*display:inline;font: 12px/1.5 "SimSun";vertical-align:middle;height:16px;}.cssTextModuleend{}.module-header .info-i .vip-button {background-color: #e82b1a;padding: 6px 11px;border-radius: 2px;}.module-header .info-i .vip-button:hover,.module-header .info-i .vip-button:active,.module-header .info-i .vip-button:focus,.module-header .info-i .vip-button:visited{text-decoration: none;}.module-header .super-member-tip{cursor:auto;font-family:"Microsoft YaHei", "Microsoft JhengHei", "黑体";width:285px;height:200px;border:1px solid #a9cbe2;color:#1e1e1e;text-align:left;box-sizing:border-box;top:30px;left:-132px;position:absolute;font-size:14px;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background:#eff7ff;z-index:10}.module-header .super-member-tip .tip-arrow{display:block;width:18px;height:9px;position:absolute;background:url(http://yun.baidu.com/ppres/static/thirdparty/header/images/super_member_arrow.png?t=201605121041) no-repeat;background-size:cover;top:-9px;left:133px}.module-header .super-member-tip .tip-close{margin-right:10px;cursor:pointer;color:#fff;font-size:25px;position:absolute;right:0}.module-header .super-member-tip .tip-title{height:75px;padding:15px 15px;box-sizing:border-box;background:#3f96f8;color:#eef6ff;background:url(http://yun.baidu.com/ppres/static/thirdparty/header/images/super_member_tip.gif?t=201605121041) no-repeat;background-size:contain;*padding:0 0 0 15px}.module-header .super-member-tip .tip-title p{height:25px;line-height:25px}.module-header .super-member-tip .tip-title span{color:#fff600;font-size:18px;vertical-align:bottom;*vertical-align:baseline}.module-header .super-member-tip .tip-content{padding:15px 15px;line-height:18px;font-size:12px}.module-header .super-member-tip .tip-body{height:55px}.module-header .super-member-tip .tip-button{display:block;margin:0 auto;width:104px;height:30px;color:#fff;background:#ff4f4f;font-size:12px;text-align:center;line-height:30px;text-decoration:none;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}</style></head>
+<body>
+
+<div class="frame-all" id="layoutApp">
+<div class="frame-aside" id="layoutAside">
+<div node-type="module" class="module-aside aside">
+<ul class="menu-list">
+<li node-type="list-item" data-key="all" class="list-item active">
+<a node-type="item-href" class="sprite2 b-no-ln" hidefocus="true" href="__CONTROLLER__/resourcelist">
+<span class="text">
+<span node-type="img-ico" class="img-ico aside-disk"></span>
+<span node-type="item-title">全部文件</span>
+
+</span>
+</a>
+</li>
+<foreach name="click" item="v">
+    <li node-type="list-item" data-key="doc" class="list-item">
+    <a node-type="item-href" class="b-no-ln" hidefocus="true" href="__CONTROLLER__/click/t_id/{$v.t_id}">
+    <span class="text">
+    <span node-type="img-ico" class="img-ico aside-doc"></span>
+    <span node-type="item-title">{$v.type}</span>
+    </span>
+    </a>
+    </li>
+</foreach>
+</ul>
+<div style="display: block;" class="item-separator"></div>
+<div style="display: block;" class="item-separator"></div>
+</div>
+</div>
+<div data-cid="m011227982797183989" class="frame-main" id="layoutMain">
+<div class="module-toolbar g-clearfix">
+<div class="default-dom">
+<div class="list-grid-switch grid-switched-on">
+</div>
+</div>
+<div class="after-dom"></div>
+<div style="display: none;" class="user-dom">
+</div>
+</div>
+<div style="height: 493px;" node-type="module-list" class="module-list"><div id="sp">
+<div node-type="module-history-list" class="module-history-list">
+<div id="res-box">
+
+
+
+</div>
+<div style="display: block;" class="list-view-header"><div class="list-header">
+<ul style="display: none;" class="list-cols" node-type="cols">
+<li data-key="name" class="col first-col" style="width:60%;">
+<div node-type="check" class="col-item check">
+</li>
+<li data-key="size" class="col" style="width:16%;">
+<span class="order-icon"></span></li>
+</ul>
+<ul class="grid-cols" node-type="cols" style="">
+<li class="col first-col"><span class="history-list-dir">{$ming}{$url}</span>
+<span class="history-list-tips">
+<form action="">
+<input type="submit" id="click" value='横排'/>
+<input type="button" id="upright" value='竖排'/>
+</form>
+</span>
+
+<div node-type="check" class="col-item check">
+
+</div></li></ul>
+<div class="list-header-operatearea global-clearfix">
+<div style="white-space: nowrap; position: relative;" class="list-header-operate">
+<div class="button-box-mark" style="display:inline-:inline;*zoom:1;width:1px;height:1px;line-height:0;"></div><div class="opacity-button-box" style="position: absolute; top: 0px; padding-top: 7px; line-height: normal; display: block; visibility: hidden; padding-left: 130px; width: 1016px;">
+</div></div><div class="path-info" style="width:0%"><span class="search-feild" node-type="search-feild"></span></div></dd></div><div class="scrollbar" style="display: none;" unselectable="on"><div dir="up" id="scrollbarArrowUp" class="scrollbar-arrow scrollbar-arrow-up sprite" unselectable="on"></div><div style="height: 392px;" class="scrollbar-tracker" unselectable="on"><div style="height: 4219.54px; top: 0px;" class="scrollbar-thumb" unselectable="on"></div></div><div dir="down" id="scrollbarArrowDown" class="scrollbar-arrow scrollbar-arrow-down sprite" unselectable="on"></div></div></div></div><div style="display: block;" class="grid-view-container"><div style="height: 420px;" node-type="module-grid-view" class="module-grid-view"><div style="margin-top: 0px;overflow:auto" class="grid-view" ><dd class="g-clearfix">
+<div id="list-heng">
+<foreach name='wenjianjia' item="folder">
+<div _installed="1" _position="0" style="display: block;" onclick="level({$folder.t_id});" class="grid-view-item open-enable"><div class="fileicon dir-large" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"><img style="visibility: hidden;" class="thumb"><span node-type="checkbox" class="checkbox"></span></div>
+<div class="file-name"><a node-type="name" class="filename" href="javascript:void(0);"  title="{$folder.type}">{$folder.type}</a>
+</div></div>
+</foreach>
+<foreach name="resourcelist" item="vl">
+    <?php if ($vl['vo']=="zip"): ?> 
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/zip.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?> 
+    <?php if ($vl['vo']=="docx"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon fileicon-large-doc" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/doc.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?>
+    <?php if ($vl['vo']=="exe"): ?>
+        <div _installed="1" _position="1" style="display: block;" class="grid-view-item"><div class="fileicon fileicon-sys-l-exe" title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/exe.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif; ?>
+    <?php if ($vl['vo']=="txt"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large"  title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/txt.png" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif;?>
+	<?php if ($vl['vo']=="mp4"): ?>
+        <div _installed="1" _position="0" style="display: block;" class="grid-view-item"><div class="fileicon default-large"  title="" onmousemove="fun(this,1)" onmouseout="fun(this,2)"  onclick="about({$vl.re_id})"><img style="padding-top:15px" src="__PUBLIC__/foreground/js/mp4.jpg" alt="" height="60px"><span node-type="checkbox" class="checkbox"></span></div><div class="file-name"><a node-type="name" target="_black" class="filename" href="__CONTROLLER__/about/id/{$vl.re_id}" title="{$vl.resource}">{$vl.resource}</a></div></div>
+    <?php endif;?>
+</foreach>
+</div>
+</div>
+</div></div></div></div>
+</div>
+</div>
+<include file="./Application/Home/View/Resource/header.html" />
+</div>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script>
+    function level(id){
+        var ajax = new XMLHttpRequest();
+            ajax.open("get","__CONTROLLER__/level/id/"+id,true);
+            ajax.send(null);
+            ajax.onreadystatechange=function(){
+            if (ajax.readyState==4){
+               document.getElementById('sp').innerHTML=ajax.responseText;
+            }
+        }
+    }
+</script>
+<script>
+    function search(){
+        var sou=document.getElementById('q').value;
+        var ajax = new XMLHttpRequest();
+            ajax.open("get","__CONTROLLER__/search/sou/"+sou,true);
+            ajax.send(null);
+            ajax.onreadystatechange=function(){
+            if (ajax.readyState==4){
+               document.getElementById('res-box').innerHTML=ajax.responseText;
+            }
+        }   
+    }
+    function fun(obj,x) {
+    if (x==1) {
+        obj.border="1";
+        obj.style.borderColor="#6c6ce4";
+    }else{
+        obj.border="";
+        obj.style.borderColor="";
+    }
+}
+</script>
+<script>
+    function about(id){
+        var ajax = new XMLHttpRequest();
+            ajax.open("get","__CONTROLLER__/about/id/"+id,true);
+            ajax.send(null);
+            ajax.onreadystatechange=function(){
+            if (ajax.readyState==4){
+               document.getElementById('sp').innerHTML=ajax.responseText;
+            }
+        }
+    }
+</script>
+<script>
+    $("#upright").click(function(){
+      id = $(this).attr("id");
+      //alert(id);
+         
+    $.ajax({
+    type: "POST",
+    url: "__APP__/Home/Resource/upright",
+    data: "id="+id,
+    success: function(msg){
+      $("#list-heng").html(msg);
+    }
+ });
+
+    })
+
+
+</script>
